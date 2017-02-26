@@ -1,0 +1,48 @@
+﻿<Project Sdk="Microsoft.NET.Sdk.Web">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp1.1</TargetFramework>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <PackageTargetFallback>$(PackageTargetFallback);portable-net45+win8+wp8+wpa81;</PackageTargetFallback>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Content Include="wwwroot\lib\bootstrap\css\bootstrap-theme.css" />
+    <Content Include="wwwroot\lib\bootstrap\css\bootstrap-theme.css.map" />
+    <Content Include="wwwroot\lib\bootstrap\css\bootstrap-theme.min.css" />
+    <Content Include="wwwroot\lib\bootstrap\css\bootstrap-theme.min.css.map" />
+    <Content Include="wwwroot\lib\bootstrap\css\bootstrap.css" />
+    <Content Include="wwwroot\lib\bootstrap\css\bootstrap.css.map" />
+    <Content Include="wwwroot\lib\bootstrap\css\bootstrap.min.css" />
+    <Content Include="wwwroot\lib\bootstrap\css\bootstrap.min.css.map" />
+    <Content Include="wwwroot\lib\bootstrap\fonts\glyphicons-halflings-regular.eot" />
+    <Content Include="wwwroot\lib\bootstrap\fonts\glyphicons-halflings-regular.svg" />
+    <Content Include="wwwroot\lib\bootstrap\fonts\glyphicons-halflings-regular.ttf" />
+    <Content Include="wwwroot\lib\bootstrap\fonts\glyphicons-halflings-regular.woff" />
+    <Content Include="wwwroot\lib\bootstrap\fonts\glyphicons-halflings-regular.woff2" />
+    <Content Include="wwwroot\lib\bootstrap\js\bootstrap.js" />
+    <Content Include="wwwroot\lib\bootstrap\js\bootstrap.min.js" />
+    <Content Include="wwwroot\lib\bootstrap\js\npm.js" />
+    <Content Include="wwwroot\lib\jquery-validation\additional-methods.js" />
+    <Content Include="wwwroot\lib\jquery-validation\additional-methods.min.js" />
+    <Content Include="wwwroot\lib\jquery-validation\jquery.validate.js" />
+    <Content Include="wwwroot\lib\jquery-validation\jquery.validate.min.js" />
+    <Content Include="wwwroot\lib\jquery\jquery.js" />
+    <Content Include="wwwroot\lib\jquery\jquery.min.js" />
+    <Content Include="wwwroot\lib\jquery\jquery.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Microsoft.ApplicationInsights.AspNetCore" Version="2.0.0" />
+    <PackageReference Include="Microsoft.AspNetCore" Version="1.0.3" />
+    <PackageReference Include="Microsoft.AspNetCore.Mvc" Version="1.0.2" />
+    <PackageReference Include="Microsoft.AspNetCore.StaticFiles" Version="1.0.1" />
+    <PackageReference Include="Microsoft.Extensions.Logging.Debug" Version="1.0.1" />
+    <PackageReference Include="Microsoft.VisualStudio.Web.BrowserLink" Version="1.0.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <DotNetCliToolReference Include="Microsoft.VisualStudio.Web.CodeGeneration.Tools" Version="1.0.0-msbuild3-final" />
+  </ItemGroup>
+
+</Project>
