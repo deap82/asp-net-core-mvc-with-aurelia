@@ -250,3 +250,7 @@ paket-files/
 # JetBrains Rider
 .idea/
 *.sln.iml
+src/FooBar.Web/wwwroot/jspm_packages/
+src/FooBar.Web/app/typings/
+src/FooBar.Web/wwwroot/dist/*.json
+src/FooBar.Web/wwwroot/dist/*.css

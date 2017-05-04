@@ -2,6 +2,7 @@
 
   <PropertyGroup>
     <TargetFramework>netcoreapp1.1</TargetFramework>
+    <TypeScriptCompileBlocked>true</TypeScriptCompileBlocked>
   </PropertyGroup>
 
   <PropertyGroup>
@@ -9,6 +10,7 @@
   </PropertyGroup>
 
   <ItemGroup>
+    <Content Include="wwwroot\dist\ReadMe.txt" />
     <Content Include="wwwroot\lib\bootstrap\css\bootstrap-theme.css" />
     <Content Include="wwwroot\lib\bootstrap\css\bootstrap-theme.css.map" />
     <Content Include="wwwroot\lib\bootstrap\css\bootstrap-theme.min.css" />
