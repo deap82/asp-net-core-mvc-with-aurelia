@@ -25,6 +25,8 @@
 	<link rel="stylesheet" href="~/dist/@Html.CacheBust(HostingEnvironment, "site.css")" />
 </head>
 <body>
+	<div aurelia-app="app/main"></div>
+
 	<nav class="navbar navbar-inverse navbar-fixed-top">
 		<div class="container">
 			<div class="navbar-header">
@@ -72,5 +74,11 @@
 		</script>
 		<script src="~/js/site.min.js" asp-append-version="true"></script>
 	</environment>
+
+	<script src="/jspm_packages/system.js"></script>
+	<script src="/config.js"></script>
+	<script>
+        SystemJS.import('aurelia-bootstrapper');
+	</script>
 </body>
 </html>

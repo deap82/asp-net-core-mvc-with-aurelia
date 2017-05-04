@@ -254,3 +254,4 @@ src/FooBar.Web/wwwroot/jspm_packages/
 src/FooBar.Web/app/typings/
 src/FooBar.Web/wwwroot/dist/*.json
 src/FooBar.Web/wwwroot/dist/*.css
+src/FooBar.Web/wwwroot/app/
