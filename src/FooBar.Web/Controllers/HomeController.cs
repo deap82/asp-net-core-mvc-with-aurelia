@@ -13,7 +13,12 @@ namespace FooBar.Web.Controllers
             return View();
         }
 
-        public IActionResult About()
+		public IActionResult Start()
+		{
+			return View();
+		}
+
+		public IActionResult About()
         {
             ViewData["Message"] = "Your application description page.";
 
