@@ -8,19 +8,19 @@
 					<span class="icon-bar"></span>
 					<span class="icon-bar"></span>
 				</button>
-				<a asp-area="" asp-controller="Home" asp-action="Start" class="navbar-brand">FooBar.Web</a>
+				<a route-href="route: MvcRoute; params.bind: { mvcController: 'Home', mvcAction: 'Start' }" class="navbar-brand">FooBar.Web</a>
 			</div>
 			<div class="navbar-collapse collapse">
 				<ul class="nav navbar-nav">
-					<li><a asp-area="" asp-controller="Home" asp-action="Start">Home</a></li>
-					<li><a asp-area="" asp-controller="Home" asp-action="About">About</a></li>
-					<li><a asp-area="" asp-controller="Home" asp-action="Contact">Contact</a></li>
+					<li><a route-href="route: MvcRoute; params.bind: { mvcController: 'Home', mvcAction: 'Start' }">Home</a></li>
+					<li><a route-href="route: MvcRoute; params.bind: { mvcController: 'Home', mvcAction: 'About' }">About</a></li>
+					<li><a route-href="route: MvcRoute; params.bind: { mvcController: 'Home', mvcAction: 'Contact' }">Contact</a></li>
 				</ul>
 			</div>
 		</div>
 	</nav>
 	<div class="container body-content">
-		<div textcontent.bind="message"></div>
+		<router-view></router-view>
 		<hr />
 		<footer>
 			<p>&copy; 2017 - FooBar.Web</p>
