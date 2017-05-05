@@ -35,3 +35,7 @@ textarea {
         display: none;
     }
 }
+
+section + section {
+	margin-top: 20px;
+}
