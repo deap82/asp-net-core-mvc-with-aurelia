@@ -1,7 +1,12 @@
 ﻿@{
     ViewData["Title"] = "About";
 }
-<h2>@ViewData["Title"].</h2>
-<h3>@ViewData["Message"]</h3>
-
-<p>Use this area to provide additional information.</p>
+<div id="home-about">
+	<section>
+		<h2>@ViewData["Title"]</h2>
+		<p>Use this area to provide additional information.</p>
+	</section>
+	<section>
+		Take me to the <a route-href="route: MvcRoute; params.bind: { mvcController: 'Home', mvcAction: 'Contact' }">Contact page</a>
+	</section>
+</div>
