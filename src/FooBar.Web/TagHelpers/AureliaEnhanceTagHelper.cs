@@ -1,9 +1,10 @@
-﻿using Microsoft.AspNetCore.Razor.TagHelpers;
+﻿using FooBar.Web.Core.Helpers;
+using Microsoft.AspNetCore.Razor.TagHelpers;
 using System;
 
 namespace FooBar.Web.TagHelpers
 {
-	[HtmlTargetElement(Attributes = HtmlIdAttributeName + ", " + AuEnhanceAttributeName)]
+	[HtmlTargetElement(Attributes = AuEnhanceAttributeName)]
 	public class AureliaEnhanceTagHelper : TagHelper
 	{
 		private const string HtmlIdAttributeName = "id";
@@ -19,8 +20,17 @@ namespace FooBar.Web.TagHelpers
 				return;
 			}
 
-			string elementId = Convert.ToString(output.Attributes["id"].Value);
-
+			string elementId;
+			if (!output.Attributes.ContainsName(HtmlIdAttributeName))
+			{
+				elementId = StringHelpers.RandomString(8);
+				output.Attributes.SetAttribute(HtmlIdAttributeName, elementId);
+			}
+			else
+			{
+				elementId = Convert.ToString(output.Attributes[HtmlIdAttributeName].Value);
+			}
+			
 			output.PostElement.AppendHtml($@"
                 <script>
                     SystemJS.import('app/core/aurelia-enhancer').then(enhancer => {{
