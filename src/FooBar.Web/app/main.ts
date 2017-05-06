@@ -4,7 +4,9 @@ import * as aureliaEnhancerModule from 'app/core/aurelia-enhancer';
 export function configure(aurelia: Aurelia) {
 	aurelia.use
 		.standardConfiguration()
-		.developmentLogging();
+		.developmentLogging()
+		.globalResources(
+			['app/resources/elements/html-placeholder/html-placeholder']);
 
 	aureliaEnhancerModule.init(aurelia);
 
