@@ -5,16 +5,23 @@ using System;
 namespace FooBar.Web.TagHelpers
 {
 	[HtmlTargetElement(Attributes = AuEnhanceAttributeName)]
+	[HtmlTargetElement(Attributes = AuModuleAttributeName)]
 	public class AureliaEnhanceTagHelper : TagHelper
 	{
 		private const string HtmlIdAttributeName = "id";
+
 		private const string AuEnhanceAttributeName = "th-aurelia-enhance";
-		
 		[HtmlAttributeName(AuEnhanceAttributeName)]
 		public bool Enhance { get; set; }
 
+		private const string AuModuleAttributeName = "th-aurelia-enhance-module";
+		[HtmlAttributeName(AuModuleAttributeName)]
+		public string Module { get; set; }
+
 		public override void Process(TagHelperContext context, TagHelperOutput output)
 		{
+			Enhance = !String.IsNullOrEmpty(Module);
+
 			if (!Enhance)
 			{
 				return;
@@ -30,13 +37,28 @@ namespace FooBar.Web.TagHelpers
 			{
 				elementId = Convert.ToString(output.Attributes[HtmlIdAttributeName].Value);
 			}
-			
-			output.PostElement.AppendHtml($@"
+
+			if(!String.IsNullOrEmpty(Module))
+			{
+				output.PostElement.AppendHtml($@"
                 <script>
                     SystemJS.import('app/core/aurelia-enhancer').then(enhancer => {{
-						enhancer.enhance(document.getElementById('{elementId}'));
+						SystemJS.import('{Module}').then(module => {{
+							var clientModel = module.create();
+							enhancer.enhance(clientModel, document.getElementById('{elementId}'));
+						}});
                     }});
                 </script>");
+			}
+			else
+			{
+				output.PostElement.AppendHtml($@"
+                <script>
+                    SystemJS.import('app/core/aurelia-enhancer').then(enhancer => {{
+						enhancer.enhance({{}}, document.getElementById('{elementId}'));
+                    }});
+                </script>");
+			}
 		}
 	}
 }

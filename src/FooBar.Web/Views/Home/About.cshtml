@@ -1,12 +1,15 @@
 ﻿@{
     ViewData["Title"] = "About";
 }
-<div th-aurelia-enhance="true">
+<div th-aurelia-enhance-module="app/views/home/home-about">
 	<section>
 		<h2>@ViewData["Title"]</h2>
 		<p>Use this area to provide additional information.</p>
 	</section>
 	<section>
 		Take me to the <a route-href="route: MvcRoute; params.bind: { mvcController: 'Home', mvcAction: 'Contact' }">Contact page</a>
+	</section>
+	<section>
+		<button type="button" click.delegate="showMessage()">Show message</button>
 	</section>
 </div>
