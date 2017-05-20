@@ -1,13 +1,19 @@
-﻿export function create(data: any) {
+﻿export function create(data: HomePersonModel) {
 	return new HomePersonClientModel(data);
 }
 
 class HomePersonClientModel {
-	data: any;
+	data: HomePersonModel;
 	currentYear: number;
 
-	constructor(data: any) {
+	constructor(data: HomePersonModel) {
 		this.data = data;
 		this.currentYear = new Date().getFullYear();
 	}
+}
+
+interface HomePersonModel {
+	firstName: string;
+	lastName: string;
+	age: number;
 }

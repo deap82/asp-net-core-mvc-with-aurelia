@@ -1,4 +1,5 @@
-﻿using System.ComponentModel.DataAnnotations;
+﻿using Newtonsoft.Json;
+using System.ComponentModel.DataAnnotations;
 
 namespace FooBar.Web.Models
 {
@@ -10,6 +11,7 @@ namespace FooBar.Web.Models
 		[Display(Name = "Last name")]
 		public string LastName { get; set; }
 
+		[JsonIgnore]
 		[Display(Name = "Occupation")]
 		public string Occupation { get; set; }
 
