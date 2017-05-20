@@ -1,4 +1,5 @@
 ﻿using FooBar.Web.Core.Helpers;
+using FooBar.Web.Core.Json;
 using Microsoft.AspNetCore.Razor.TagHelpers;
 using System;
 
@@ -17,6 +18,10 @@ namespace FooBar.Web.TagHelpers
 		private const string AuModuleAttributeName = "th-aurelia-enhance-module";
 		[HtmlAttributeName(AuModuleAttributeName)]
 		public string Module { get; set; }
+
+		private const string AuDataAttributeName = "th-aurelia-enhance-data";
+		[HtmlAttributeName(AuDataAttributeName)]
+		public object Data { get; set; }
 
 		public override void Process(TagHelperContext context, TagHelperOutput output)
 		{
@@ -40,11 +45,17 @@ namespace FooBar.Web.TagHelpers
 
 			if(!String.IsNullOrEmpty(Module))
 			{
+				string jsonData = "{}";
+				if (Data != null)
+				{
+					jsonData = Data.ToJsonCamelCase();
+				}
 				output.PostElement.AppendHtml($@"
                 <script>
                     SystemJS.import('app/core/aurelia-enhancer').then(enhancer => {{
 						SystemJS.import('{Module}').then(module => {{
-							var clientModel = module.create();
+							var data = {jsonData};
+							var clientModel = module.create(data);
 							enhancer.enhance(clientModel, document.getElementById('{elementId}'));
 						}});
                     }});

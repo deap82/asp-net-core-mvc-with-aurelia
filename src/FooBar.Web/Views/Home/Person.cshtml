@@ -4,17 +4,17 @@
 
 @model FooBar.Web.Models.PersonModel
 
-<div th-aurelia-enhance-module="app/views/home/home-person">
+<div th-aurelia-enhance-module="app/views/home/home-person" th-aurelia-enhance-data="@Model">
 	<h1>Edit Person</h1>
 
 	<div class="form-group">
 		<label asp-for="FirstName"></label>
-		<input asp-for="FirstName" class="form-control" value.bind="firstName" />
+		<input asp-for="FirstName" class="form-control" value.bind="data.firstName" />
 	</div>
 
 	<div class="form-group">
 		<label asp-for="LastName"></label>
-		<input asp-for="LastName" class="form-control" value.bind="lastName" />
+		<input asp-for="LastName" class="form-control" value.bind="data.lastName" />
 	</div>
 
 	<div class="form-group">
@@ -29,7 +29,7 @@
 
 	<div class="form-group">
 		<label asp-for="Age"></label>
-		<input asp-for="Age" class="form-control" value.bind="age" />
+		<input asp-for="Age" class="form-control" value.bind="data.age" />
 	</div>
 
 	<div class="form-group">
