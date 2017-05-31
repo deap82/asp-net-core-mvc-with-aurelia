@@ -45,6 +45,14 @@ namespace FooBar.Web.Controllers
 			return View(model);
 		}
 
+		[HttpPost]
+		public IActionResult Person(PersonModel input)
+		{
+			ViewData["Feedback"] = "The form was posted at " + DateTime.Now;
+			return View(input);
+		}
+
+
 		public IActionResult Error()
         {
             return View();

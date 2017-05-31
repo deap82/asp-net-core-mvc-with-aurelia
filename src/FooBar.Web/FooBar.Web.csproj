@@ -27,6 +27,7 @@
     <Content Include="wwwroot\lib\bootstrap\js\bootstrap.js" />
     <Content Include="wwwroot\lib\bootstrap\js\bootstrap.min.js" />
     <Content Include="wwwroot\lib\bootstrap\js\npm.js" />
+    <Content Include="wwwroot\lib\jquery-ajax-unobtrusive\jquery.unobtrusive-ajax.min.js" />
     <Content Include="wwwroot\lib\jquery-validation\additional-methods.js" />
     <Content Include="wwwroot\lib\jquery-validation\additional-methods.min.js" />
     <Content Include="wwwroot\lib\jquery-validation\jquery.validate.js" />
