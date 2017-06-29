@@ -52,8 +52,8 @@ namespace FooBar.Web.TagHelpers
 				}
 				output.PostElement.AppendHtml($@"
                 <script>
-                    SystemJS.import('app/core/aurelia-enhancer').then(enhancer => {{
-						SystemJS.import('{Module}').then(module => {{
+                    SystemJS.import('app/core/aurelia-enhancer').then(function(enhancer) {{
+						SystemJS.import('{Module}').then(function(module) {{
 							var data = {jsonData};
 							var clientModel = module.create(data);
 							enhancer.enhance(clientModel, document.getElementById('{elementId}'));
@@ -65,7 +65,7 @@ namespace FooBar.Web.TagHelpers
 			{
 				output.PostElement.AppendHtml($@"
                 <script>
-                    SystemJS.import('app/core/aurelia-enhancer').then(enhancer => {{
+                    SystemJS.import('app/core/aurelia-enhancer').then(function(enhancer) {{
 						enhancer.enhance({{}}, document.getElementById('{elementId}'));
                     }});
                 </script>");
