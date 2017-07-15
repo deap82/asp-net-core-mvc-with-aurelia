@@ -1,5 +1,5 @@
 ﻿@{
-    ViewData["Title"] = "Person";
+	ViewData["Title"] = "Person";
 }
 
 @model FooBar.Web.Models.PersonModel
@@ -7,7 +7,7 @@
 <div th-aurelia-enhance-module="app/views/home/home-person" th-aurelia-enhance-data="@Model">
 	<h1>Edit Person</h1>
 
-	@if(ViewData.ContainsKey("Feedback"))
+	@if (ViewData.ContainsKey("Feedback"))
 	{
 		<div class="alert alert-info">
 			@ViewData["Feedback"]
@@ -17,17 +17,20 @@
 	<form asp-action="Person" data-ajax="true">
 		<div class="form-group">
 			<label asp-for="FirstName"></label>
-			<input asp-for="FirstName" class="form-control" value.bind="data.firstName" />
+			<input asp-for="FirstName" class="form-control" th-au-bind-value="FirstName" />
 		</div>
 
 		<div class="form-group">
 			<label asp-for="LastName"></label>
-			<input asp-for="LastName" class="form-control" value.bind="data.lastName" />
+			<input asp-for="LastName" class="form-control" th-au-bind-value="LastName" />
 		</div>
 
 		<div class="form-group">
 			<label>Full name</label>
-			<div>${data.firstName} ${data.lastName}</div>
+			<div>
+				<span th-au-bind-textcontent="FirstName"></span>
+				<span th-au-bind-textcontent="LastName"></span>
+			</div>
 		</div>
 
 		<div class="form-group">
@@ -37,7 +40,7 @@
 
 		<div class="form-group">
 			<label asp-for="Age"></label>
-			<input asp-for="Age" class="form-control" value.bind="data.age" />
+			<input asp-for="Age" class="form-control" th-au-bind-value="Age" />
 		</div>
 
 		<div class="form-group">
