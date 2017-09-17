@@ -1,5 +1,5 @@
 ﻿import { Aurelia } from 'aurelia-framework';
-import * as aureliaEnhancerModule from 'app/core/aurelia-enhancer';
+import * as aureliaEnhancerModule from './core/aurelia-enhancer';
 
 export function configure(aurelia: Aurelia) {
 	aurelia.use

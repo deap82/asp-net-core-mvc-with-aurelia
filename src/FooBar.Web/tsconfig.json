@@ -5,6 +5,12 @@
 		"noEmitOnError": true,
 		"removeComments": true,
 		"sourceMap": true,
+		"lib": [
+			"dom",
+			"es5",
+			"es2015.iterable"
+		],
+		"moduleResolution": "node",
 		"target": "es5",
 		"module": "amd",
 		"emitDecoratorMetadata": true,

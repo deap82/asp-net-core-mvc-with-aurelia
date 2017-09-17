@@ -14,7 +14,6 @@ requireDir('./gulp/tasks', { recurse: true });
 gulp.task('web-projectopen', function (cb) {
     require('child_process').execSync('npm install');
     require('child_process').execSync('jspm install -y');
-    require('child_process').execSync('typings install');
     runSequence('watcher', cb);
 });
 
