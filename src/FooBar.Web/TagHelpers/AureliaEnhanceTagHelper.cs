@@ -51,24 +51,24 @@ namespace FooBar.Web.TagHelpers
 					jsonData = Data.ToJsonCamelCase();
 				}
 				output.PostElement.AppendHtml($@"
-                <script>
-                    SystemJS.import('app/core/aurelia-enhancer').then(function(enhancer) {{
+				<script>
+					SystemJS.import('app/core/aurelia-enhancer').then(function(enhancer) {{
 						SystemJS.import('{Module}').then(function(module) {{
 							var data = {jsonData};
 							var clientModel = module.create(data);
 							enhancer.enhance(clientModel, document.getElementById('{elementId}'));
 						}});
-                    }});
-                </script>");
+					}});
+				</script>");
 			}
 			else
 			{
 				output.PostElement.AppendHtml($@"
-                <script>
-                    SystemJS.import('app/core/aurelia-enhancer').then(function(enhancer) {{
+				<script>
+					SystemJS.import('app/core/aurelia-enhancer').then(function(enhancer) {{
 						enhancer.enhance({{}}, document.getElementById('{elementId}'));
-                    }});
-                </script>");
+					}});
+				</script>");
 			}
 		}
 	}
