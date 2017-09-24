@@ -55,7 +55,8 @@ namespace FooBar.Web.TagHelpers
 					SystemJS.import('app/core/aurelia-enhancer').then(function(enhancer) {{
 						SystemJS.import('{Module}').then(function(module) {{
 							var data = {jsonData};
-							var clientModel = module.create(data);
+							var diMetaData = module.createMetaData();
+							var clientModel = enhancer.createViewModel(diMetaData, data);
 							enhancer.enhance(clientModel, document.getElementById('{elementId}'));
 						}});
 					}});
