@@ -1,49 +1,49 @@
 {
-	"version": "1.0.0",
-	"name": "asp-net-core-mvc-with-aurelia",
-	"private": true,
-	"devDependencies": {
-		"@types/jquery": "^3.2.12",
-		"@types/jquery-validation-unobtrusive": "^3.2.32",
-		"@types/jquery.validation": "^1.16.3",
-		"aurelia-bundler": "^0.5.0",
-		"aurelia-fetch-client": "^1.1.3",
-		"aurelia-framework": "^1.1.2",
-		"aurelia-router": "^1.3.0",
-		"crypto": "0.0.3",
-		"del": "^2.2.2",
-		"fs": "0.0.1-security",
-		"gulp": "^3.9.1",
-		"gulp-autoprefixer": "^3.1.1",
-		"gulp-concat-css": "^2.3.0",
-		"gulp-sass": "^3.1.0",
-		"gulp-typescript": "^3.2.2",
-		"gulp-watch": "^4.3.11",
-		"jsonfile": "^3.0.0",
-		"jspm": "^0.16.53",
-		"node-sass": "^4.5.2",
-		"path": "^0.12.7",
-		"require-dir": "^0.3.1",
-		"run-sequence": "^1.2.2",
-		"slash": "^1.0.0",
-		"through2": "^2.0.3",
-		"typescript": "^2.5.2"
-	},
-	"jspm": {
-		"directories": {
-			"baseURL": "wwwroot"
-		},
-		"dependencies": {
-			"aurelia-bootstrapper": "npm:aurelia-bootstrapper@^2.1.1",
-			"aurelia-fetch-client": "npm:aurelia-fetch-client@^1.1.2",
-			"aurelia-framework": "npm:aurelia-framework@^1.1.2",
-			"aurelia-pal-browser": "npm:aurelia-pal-browser@^1.2.1",
-			"whatwg-fetch": "npm:whatwg-fetch@^2.0.3"
-		},
-		"devDependencies": {
-			"babel": "npm:babel-core@^5.8.24",
-			"babel-runtime": "npm:babel-runtime@^5.8.24",
-			"core-js": "npm:core-js@^1.1.4"
-		}
-	}
+  "version": "1.0.0",
+  "name": "asp-net-core-mvc-with-aurelia",
+  "private": true,
+  "devDependencies": {
+    "@types/jquery": "^3.2.12",
+    "@types/jquery-validation-unobtrusive": "^3.2.32",
+    "@types/jquery.validation": "^1.16.3",
+    "aurelia-bundler": "^0.5.0",
+    "aurelia-fetch-client": "^1.1.3",
+    "aurelia-framework": "^1.1.2",
+    "aurelia-router": "^1.3.0",
+    "crypto": "0.0.3",
+    "del": "^2.2.2",
+    "fs": "0.0.1-security",
+    "gulp": "^3.9.1",
+    "gulp-autoprefixer": "^3.1.1",
+    "gulp-concat-css": "^2.3.0",
+    "gulp-sass": "^3.1.0",
+    "gulp-typescript": "^3.2.2",
+    "gulp-watch": "^4.3.11",
+    "jsonfile": "^3.0.0",
+    "jspm": "^0.16.53",
+    "node-sass": "^4.5.2",
+    "path": "^0.12.7",
+    "require-dir": "^0.3.1",
+    "run-sequence": "^1.2.2",
+    "slash": "^1.0.0",
+    "through2": "^2.0.3",
+    "typescript": "^2.5.2"
+  },
+  "jspm": {
+    "directories": {
+      "baseURL": "wwwroot"
+    },
+    "dependencies": {
+      "aurelia-bootstrapper": "npm:aurelia-bootstrapper@^2.1.1",
+      "aurelia-fetch-client": "npm:aurelia-fetch-client@^1.1.2",
+      "aurelia-framework": "npm:aurelia-framework@^1.1.2",
+      "aurelia-pal-browser": "npm:aurelia-pal-browser@^1.2.1",
+      "whatwg-fetch": "npm:whatwg-fetch@^2.0.3"
+    },
+    "devDependencies": {
+      "babel": "npm:babel-core@^5.8.24",
+      "babel-runtime": "npm:babel-runtime@^5.8.24",
+      "core-js": "npm:core-js@^1.1.4"
+    }
+  }
 }
